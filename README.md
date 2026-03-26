@@ -1,1 +1,3 @@
-# Construccion_de_software_y_toma_de_decisiones
+# Construccion de software y toma de decisiones.
+
+## Repositorio personal de Víctor A. García - A01713062
