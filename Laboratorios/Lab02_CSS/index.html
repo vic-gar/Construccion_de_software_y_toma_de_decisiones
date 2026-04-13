@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Introducción a CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div id="logo">Lab CSS</div>
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="#features">Temas</a>
+      <a href="#reflexion">Reflexión</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Lab Introducción a CSS</h1>
+        <p>
+          En este laboratorio se aplican los conceptos básicos de CSS para dar 
+          estilo a una landing page, <br> utilizando selectores, box model, 
+          flexbox, unidades relativas y diseño responsivo.
+        </p>
+        <a class="btn" href="#features">Ver temas</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="cards">
+        <div class="card">
+          <h2>Selectores CSS</h2>
+          <p>
+            Se utilizan selectores de etiqueta, clase, ID, pseudo-clase y 
+            descendiente para aplicar estilos visibles a distintos elementos 
+            de la página.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Box Model y espaciado</h2>
+          <p>
+            Las tarjetas aplican padding, margin, border y border-radius para 
+            comprender el modelo de caja y observar su comportamiento en 
+            DevTools.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Flexbox y responsividad</h2>
+          <p>
+            Se implementa Flexbox en la navegación, el hero y las tarjetas, 
+            además de media queries con enfoque mobile-first para adaptar 
+            el diseño a distintas pantallas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reflexion">
+      <h2>Reflexión</h2>
+
+      <h3>¿Cuál es la diferencia entre padding y margin?</h3>
+      <p>
+        El padding es el espacio interno entre el contenido y el borde de un 
+        elemento y el margin es el espacio externo que separa un elemento de 
+        otros elementos.
+      </p>
+
+      <h3>¿Por qué se recomienda usar box-sizing: border-box?</h3>
+      <p>
+        Porque permite que el ancho y alto de un elemento incluyan el padding y 
+        el borde, lo que facilita controlar mejor el tamaño total de cada caja.
+      </p>
+
+      <h3>¿Qué significa diseñar con enfoque mobile-first?</h3>
+      <p>
+        Significa comenzar diseñando para dispositivos móviles y después 
+        adaptar la interfaz a pantallas más grandes usando media queries.
+      </p>
+
+      <h3>¿En qué situaciones preferirías rem sobre px?</h3>
+      <p>
+        Preferiría usar rem en tamaños de texto y espaciados porque permite un 
+        diseño más flexible y adaptable y usaría px en bordes o sombras donde 
+        se necesita una medida más precisa.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Laboratorio de Introducción a CSS</p>
+  </footer>
+
+</body>
+</html>
