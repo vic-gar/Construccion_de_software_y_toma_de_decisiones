@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="navbar__logo">DevCard</span>
+    <ul class="navbar__links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <button id="toggle-dark" class="btn btn--sm">🌙 Modo oscuro</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero__avatar"
+         src="https://api.dicebear.com/7.x/avataaars/svg?seed=devcard"
+         alt="Avatar">
+    <h1 class="hero__name">Ada Lovelace</h1>
+    <p class="hero__role">Full-Stack Developer</p>
+    <a href="#" class="btn">Ver proyectos</a>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>Mis habilidades</h2>
+    <div class="skills__grid">
+      <div class="skill-card">
+        <span class="skill-card__icon">🌐</span>
+        <h3>HTML & CSS</h3>
+        <p>Semántica, Flexbox, Grid y diseño responsivo.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon">⚙️</span>
+        <h3>JavaScript</h3>
+        <p>ES6+, DOM, Fetch API y programación asíncrona.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon">🗄️</span>
+        <h3>Node.js</h3>
+        <p>APIs REST, Express y manejo de bases de datos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preguntas laboratorio -->
+  <section class="preguntas" id="preguntas">
+    <h2>Preguntas y respuestas</h2>
+
+    <div class="preguntas-item">
+      <h3>1. ¿Qué ventajas ofrecen las variables CSS sobre los valores hardcodeados?</h3>
+      <p>Las variables CSS ayudan a mantener el código más ordenado y fácil de modificar, ya que permiten reutilizar valores sin tener que cambiarlos en cada parte del archivo, haciendo que el diseño sea más consistente y práctico de mantener.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>2. ¿En qué casos conviene declarar variables CSS fuera del selector :root?</h3>
+      <p>Es mejor hacerlo cuando las variables solo se van a usar dentro de un componente o sección específica, ya que así se limita su alcance y se evita afectar otras partes del diseño.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>3. ¿Cómo se pueden utilizar las variables CSS para implementar un sistema de temas (como modo oscuro)?</h3>
+      <p>Una forma común es definir variables en :root y luego sobrescribirlas en una clase como .dark, de esta manera, al cambiar la clase en el body, los colores y estilos cambian automáticamente.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>4. ¿Qué sucede cuando intentas usar una variable CSS que no ha sido declarada?</h3>
+      <p>En ese caso, el navegador no puede aplicar correctamente la propiedad, por lo que puede ignorarla o utilizar un valor de respaldo si este fue definido previamente.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>5. ¿Cuál es la diferencia entre los enfoques mobile-first y desktop-first?</h3>
+      <p>El enfoque mobile-first consiste en diseñar primero para dispositivos móviles y después escalar a pantallas más grandes, mientras que desktop-first hace lo contrario, iniciando desde pantallas grandes y adaptándose hacia tamaños más pequeños.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>6. ¿Qué breakpoints son los más comunes y por qué?</h3>
+      <p>Generalmente se utilizan breakpoints como 480px, 768px, 1024px y 1280px, ya que corresponden a tamaños típicos de celulares, tablets y computadoras, lo que facilita adaptar el diseño a diferentes dispositivos.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>7. ¿Cómo afecta el viewport meta tag al diseño responsivo?</h3>
+      <p>El viewport permite que el diseño se ajuste correctamente al ancho del dispositivo, lo cual es fundamental para que las páginas se vean bien en celulares.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>8. ¿Qué técnicas además de media queries existen para crear diseños responsivos?</h3>
+      <p>Además de media queries, se pueden utilizar herramientas como Flexbox, CSS Grid, unidades relativas y funciones modernas como clamp(), que ayudan a crear diseños más flexibles.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>9. ¿Cómo puedes identificar qué regla CSS está siendo aplicada cuando hay múltiples selectores?</h3>
+      <p>Esto se puede analizar utilizando las herramientas de desarrollo del navegador, donde se muestran las reglas aplicadas y cuáles han sido sobrescritas.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>10. ¿Qué información proporciona la pestaña Computed en DevTools?</h3>
+      <p>La pestaña Computed muestra los valores finales que el navegador aplica a cada propiedad, considerando la cascada, herencia y prioridades del CSS.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>11. ¿Cómo puedes simular diferentes dispositivos sin tener acceso físico a ellos?</h3>
+      <p>Se puede hacer mediante el modo responsivo en las herramientas de desarrollo del navegador, el cual permite visualizar cómo se vería la página en distintos dispositivos.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>12. ¿En qué situaciones es preferible usar Bootstrap sobre Tailwind CSS y viceversa?</h3>
+      <p>Bootstrap es útil cuando se necesita desarrollar rápido con componentes ya definidos, mientras que Tailwind es mejor cuando se busca mayor personalización y control sobre el diseño.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>13. ¿Qué significa que Tailwind sea "utility-first"?</h3>
+      <p>Significa que utiliza clases pequeñas que cumplen una sola función, lo que permite construir el diseño directamente en el HTML sin depender de estilos predefinidos complejos.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>14. ¿Cómo afecta el uso de un framework CSS al tamaño final del bundle?</h3>
+      <p>El tamaño puede aumentar si no se eliminan estilos que no se utilizan, aunque actualmente existen herramientas que permiten optimizar el CSS y reducir este problema.</p>
+    </div>
+
+    <div class="preguntas-item">
+      <h3>15. ¿Es posible combinar múltiples frameworks CSS en un mismo proyecto? ¿Por qué sí o por qué no?</h3>
+      <p>Aunque sí es posible, no es recomendable, ya que puede generar conflictos entre estilos, redundancia en el código y un mayor peso en el proyecto.</p>
+    </div>
+
+  </section>
+
+  <section class="referencias" id="referencias">
+    <h2>Referencias</h2>
+
+    <div class="referencias-item">
+      <p>Padilla, C. (1 de agosto, 2022). Tutorial de CSS de Consulta de medios CSS: Resoluciones estándar, breakpoints CSS y adaptar a tamaños de teléfonos. https://www.freecodecamp.org/espanol/news/tutorial-de-css-de-consultas-de-medios-resoluciones-y-mas/</p>
+      <p>MDN Web Docs. (s.f.). Etiqueta meta del Viewport. https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/meta/name/viewport</p>
+      <p>MDN Web Docs. (s.f.). Diseño receptivo. https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design</p>
+      <p>tailwindcss. (s.f.). Controlar el tamaño de los archivos. https://v1.tailwindcss.com/docs/controlling-file-size</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>✉️ ada@devcard.io — GitHub: @ada</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggle-dark');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      btn.textContent = document.body.classList.contains('dark')
+        ? '☀️ Modo claro'
+        : '🌙 Modo oscuro';
+    });
+  </script>
+
+</body>
+</html>
