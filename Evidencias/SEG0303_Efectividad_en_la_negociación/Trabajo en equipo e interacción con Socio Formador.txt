@@ -1,0 +1,19 @@
+Trabajo en equipo e interacción con el Socio Formador
+
+Víctor Adrián García Galván - A01713062
+
+La comunicación es clave al momento de llevar a cabo proyectos, ya que nos ayuda a asegurar la claridad en los objetivos, el alcance y las expectativas. A lo largo del desarrollo del proyecto han llegado a aparecer situaciones que ameriten el desarrollo profundo de la comunicación tanto con mi compañero como con el socio formador. 
+
+Durante la interacción colaborativa con mi compañero de equipo llegaron a haber varias situaciones en las que nos encontramos en desacuerdo con ideas de como llevar a cabo ciertas actividades, un ejemplo de esto es el desarrollo de la base de datos y la implementación del sistema de reglas. Mi compañero generó una idea bastante buena sobre el como llevar a cabo el sistema de reglas, solamente que a mi parecer no lograríamos implementarla en el tiempo que nos queda. Mi compañero me explicó que era cierto que sería más complicado, pero que no nos afectaría en el tiempo de la entrega debido a que hacía más eficientes otros aspectos. Después de hablarlo y planearlo bien entre los dos se optó dar pie a esa idea. 
+
+De mismo modo, en la misma discusión, le indiqué a mi compañero que el mejor manejador para nuestra base de datos sería DBeaver, debido a que soporta distintos tipos de bases de datos, como PostgreSQL o MySQL, mientras que otros manejadores se limitan en esta función. Mi compañero indicó que esta podía no ser la mejor opción, debido a que el proyecto está enfocado a PostgreSQL y pgAdmin podría ser mejor, además de que es el que se estaría usando en su mayoría en las prácticas. Le comenté que el uso de DBeaver aportaba más, debido a que de igual forma estaríamos trabajado en supabase, y que DBeaver es mucho más gentil tanto en el manejo de la base como en el editor SQL que es más intuitivo en su interfaz gráfica, además de tener una ventaja en el manejo de múltiples conexiones. Así, después de dialogar se llegó a que si se estaría utilizando DBeaver para el manejo. 
+
+Finalmente, en las interacciones con el socio formador se llevaron a cabo varias sesiones para definir los intereses con el proyecto, en base a estos apoyé a definir activamente el alcance de este mismo, teniendo en cuenta el corto tiempo que tenemos para implementarlo. En la sesión que se dio para presentar nuestro avance indique directamente al socio formador, en base a acuerdos preestablecidos por el equipo, que nuestro alcance no podría cumplir con todas las funcionalidades que nos pidieron, pero priorizando aquellas relacionadas con lineamientos de la ley y que son necesarias para el correcto funcionamiento del sistema. Aunque no se cumpliría con las expectativas del Socio Formador, este al escuchar que se definió claramente el alcance confirmó que es correcto debido a las circunstancias, pero que tuviéramos en mente el poder llegar a hacer más, ósea que no nos cerráramos y que si lográbamos desarrollar más a nuestro alcance lo hiciéramos, a lo cual indique que si tendríamos eso en mente para el futuro del proyecto.
+
+
+
+
+
+
+
+
