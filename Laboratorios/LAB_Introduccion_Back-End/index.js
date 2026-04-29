@@ -1,5 +1,39 @@
 let log = console.log;
 
+const http = require("http");
+const fs = require("fs");
+
+const server = http.createServer((req, res) => {
+    log(req.url);
+
+    res.setHeader("Content-Type", "text/html");
+
+    if (req.url === "/") {
+        fs.readFile("index.html", (err, data) => {
+            if (err) {
+                res.write("<h1>Error al cargar index.html</h1>");
+                res.end();
+                return;
+            }
+
+            res.write(data);
+            res.end();
+        });
+    } else {
+        res.write("<h1>404 - Página no encontrada</h1>");
+        res.end();
+    }
+});
+
+server.listen(4141, () => {
+    log("Mi servidor está vivo corriendo en el puerto 4141");
+});
+
+
+
+/*
+let log = console.log;
+
 const http = require('http');
 const server=http.createServer((req, res) => {
     log(req.url);
@@ -29,7 +63,7 @@ server.listen(4141, () => {
 
 
 
-/*
+
 log("Hola mundo");
 
 //fs módulo que contendrá las funciones para manipular el sistema de archivos

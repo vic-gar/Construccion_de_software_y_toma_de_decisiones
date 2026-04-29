@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Práctica: Introducción a Desarrollo Web con HTML</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 style="text-align: center;">Laboratorio 1</h1>
+      <h2>Víctor Adrián García Galván - A01713062</h2>
+      <h3>
+        Contacto: A01713062@tec.mx<br>
+        <br> Semana 1
+      </h3>
+    </header>
+
+    <main>
+        <hr/>
+        <h2>Sobre mi</h2>
+        <p>Soy Victor, actualmente estoy estudiando la carrera de Tecnologías 
+            Computacionales en el Tecnológico de Monterrey, con idea de 
+            enfoque en ciberseguridad o en fullstack. Me gusta el basketball y
+            ver series y películas.
+        </p>
+
+        <h2>Apartado de Preguntas</h2>
+
+        <h3>1. ¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+        <p>
+            Internet es una infraestructura que se utiliza para conectar algun 
+            dispositivo con cualquier otro en cuaquier parte del mundo, mientras 
+            que la World Wide Web es una colección de información a la que se accede
+            mediante Internet <i>(Global Connect, 2024).</i>
+        </p>
+
+        <h3>2. ¿Cuáles son las partes de un URL?</h3>
+        <p>
+            Un esquema (HTTP o HTTPS), un nombre de host, número de puerto, la ruta
+            y una cadena de consulta, como el siguiente ejemplo:<br> 
+            
+            <br>scheme://hostname:port/path?query<br>
+
+            <br><i>(International Bussines Machines, IBM, 2026)</i>.
+        </p>
+
+        <h3>3. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, 
+            PATCH, DELETE?</h3>
+        <ul>
+            <li>
+                <strong>GET:</strong> se utiliza para recuperar datos del servidor. Es un 
+                    método de solo lectura, por lo que no existe riesgo de que los 
+                    datos se modifiquen o se corrompan.
+            </li>
+
+            <li>
+                <strong>HEAD:</strong> el servidor devuelve solo las cabeceras 
+                (headers) y no el cuerpo de la respuesta.
+            </li>
+            
+            <li>
+                <strong>POST:</strong> envía datos al servidor y crea un nuevo 
+                recurso, el cual queda subordinado a otro recurso padre.
+            </li>
+        
+            <li>
+                <strong>PUT:</strong> se utiliza con mayor frecuencia para 
+                actualizar un recurso existente.
+            </li>
+            
+            <li>
+                <strong>PATCH:</strong> es muy similar al método PUT, la diferencia 
+                radica en que el cuerpo de la solicitud solo necesita contener los 
+                cambios específicos realizados al recurso.
+            </li>
+            
+            <li>
+                <strong>DELETE:</strong> se utiliza para eliminar un recurso 
+                especificado por su URI.
+            </li>
+        </ul>
+        <p><i>(Stack Overflow, 2020).</i></p>
+
+        <h3>4. ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, 
+            por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? 
+            ¿Por qué?</h3>
+        <p>Se usa POST para enviar formularios como login de usuario y 
+            contraseña, ya que transmite datos sensibles en el cuerpo de la 
+            petición (no en la URL como GET), mejorando seguridad y permitiendo 
+            mayor volumen de datos<i> (Sanchez, J., 2026).</i></p>
+
+        <h3>5. ¿Qué método HTTP se utiliza cuando a través de un navegador web 
+            se accede a una página a través de un URL?</h3>
+        <p>GET se utiliza al ingresar una URL en el navegador, ya que solicita el 
+            recurso sin alterar datos del servidor<i> (Sanchez, J., 2026).</i></p>
+
+        <h3>6. Un servidor web devuelve una respuesta HTTP con código 200. 
+            ¿Qué significa esto? ¿Ocurrió algún error?</h3>
+        <p>No sucedió ningun error, el código 200 OK significa que la solicitud 
+            tuvo éxito.
+        </p>
+
+        <h3>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un 
+            usuario reporta que intentó acceder al sitio y se encontró con un error 
+            404? ¿Por qué?</h3>
+        <p>Si es responsabilidad del desarrollador parcalmente debido a que este 
+            código indica que el servidor no pudo encontrar el contenido que 
+            se le solicita, por ende se deben de verificar rutas o redirigir. 
+            También puede ser culpa del usuario si escribió mal la URL</p>
+
+        <h3>8. ¿Es responsabilidad del desarrollador corregir un sitio web si un 
+            usuario reporta que intentó acceder al sitio y se encontró con un error 
+            500? ¿Por qué?</h3>
+        <p>Si es su responsabilidad debido a que este código indica que hubieron 
+            fallos en el servidor o en configuraciones externas.</p>
+
+        <h3>9. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado 
+            (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén 
+            desaprobados.</h3>
+        <p>Son aquellos que el W3E ha designado como desactualizados y que ya no 
+            pueden usarse ya que pueden no ser soportados en futuras 
+            actualizaciones o navegadores <i>(Coyier, C., 2007)</i></p>
+
+        <h3>10. ¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+        <p>
+            Aquí hay algunos ejemplos de componentes de estructura y estilos para 
+            tablas: 
+            <ul>
+                <li>
+                    Table (contenedor), tr (filas), td/th (celdas), 
+                    thead/body/tfoot (secciones cabeza/cuerpo/pie), 
+                    caption (título).
+                </li>
+                
+                <li>
+                    Atributos como border, cellpadding, cellspacing.
+                </li>
+            </ul>
+
+            <i>(Mary, 2026)</i>
+        </p>
+
+        <h3>11. ¿Cuáles son los principales controles de una forma HTML5?</h3>
+        <p>
+            Los principales controles son los siguientes: input (text, password, 
+            email, date, checkbox, radio, file), select (listas desplegables), 
+            textarea (texto multilineal), button, con validaciones como required, 
+            pattern <i>(MDN, Resources for Developers, by Developers, s.f.)</i>
+
+        </p>
+
+        <h3>12. Sobre el ciclo de vida y desarrollo de los sistemas de 
+            información: ¿Cuál es el ciclo de vida de los sistemas de información? 
+            ¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+        <p>
+            <ul>
+                <li>
+                    Ciclo de vida: planificación, desarrollo, implementación, 
+                    operación, mantenimiento y retiro de un sistema completo.
+                </li>
+                
+                <li>
+                    Ciclo de desarrollo: requisitos, diseño, codificación, pruebas, 
+                    implementación y mantenimiento.
+                </li>
+            </ul>
+            <i>(ServiceNow, s.f.)</i>
+        </p>
+
+        <h2>Referencias</h2>
+        <ul>
+            <li>Global Connect. (2024, enero). ¿Cuál es la diferencia entre 
+                internet y la web (WWW)?
+                <a href="https://globalconnect.cl/cual-es-la-diferencia-entre-internet-y-la-web-www/">
+                    https://globalconnect.cl/cual-es-la-diferencia-entre-internet-y-la-web-www/</a>
+            </li>
+            
+            <li>International Bussines Machines, IBM. (2026, enero). Los componentes
+                de un URL
+                <a href="https://www.ibm.com/docs/es/cics-ts/6.x?topic=concepts-components-url">
+                    https://www.ibm.com/docs/es/cics-ts/6.x?topic=concepts-components-url</a>
+            </li>
+            
+            <li>Stack Overflow. (2020, junio). ¿Cuál es la diferencia entre los 
+                métodos de http como PUT, POST, DELETE, HEAD, GET...?
+                <a href="https://es.stackoverflow.com/questions/370130/cu%c3%a1l-es-la-diferencia-entre-los-m%c3%a9todos-de-http-como-put-post-delete-head-g">
+                    https://es.stackoverflow.com/questions/370130/cu%c3%a1l-es-la-diferencia-entre-los-m%c3%a9todos-de-http-como-put-post-delete-head-g</a>
+            </li>
+            
+            <li>Sánchez, J. (2011, diciembre). Introducción al protocolo HTTP.
+                <a href="https://josejuansanchez.org/daw/introduccion_http/index.html">
+                    https://josejuansanchez.org/daw/introduccion_http/index.html</a>
+            </li>
+            
+            <li>Coyier, C. (2018, junio). List of Deprecated Attributes Still in Widespread Use.
+                <a href="https://css-tricks.com/list-of-depreciated-elements-still-in-widespread-use/">
+                    https://css-tricks.com/list-of-depreciated-elements-still-in-widespread-use/</a>
+            </li>
+            
+            <li>Mary, (2026, enero). Las tablas HTML: ¿Qué son? ¿Cómo funcionan?
+                <a href="https://liora.io/es/tablas-html-que-son">
+                    https://liora.io/es/tablas-html-que-son</a>
+            </li>
+            
+            <li>MDN. Controles de formulario originales
+                <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls">
+                    https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls</a>
+            </li>
+            
+            <li>ServiceNow. ¿En qué consiste el ciclo de vida del desarrollo de software (SDLC)?
+                <a href="https://www.servicenow.com/es/products/devops/what-is-sdlc.html">
+                    https://www.servicenow.com/es/products/devops/what-is-sdlc.html</a>
+            </li>
+            
+        </ul>
+
+        <hr>
+
+    </main>
+
+    <footer>
+      <p>Liga al sitio del editor utilizado: 
+        <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+    </footer>
+
+
+  </body>
+  
+</html>
