@@ -1,0 +1,139 @@
+Modelo Entidad-Relación y Modelo Relacional
+
+MER
+
+El Modelo Entidad–Relación es un modelo conceptual utilizado para el diseño de bases de datos que permite representar la información de un sistema del mundo real mediante entidades, relaciones y atributos, antes de su implementación.
+
+Su objetivo es estructurar la información de forma correcta, reduciendo redundancia, evitando inconsistencias y facilitando la organización de los datos.
+
+Las entidades son objetos del mundo real con existencia propia sobre los que se desea almacenar información. Se representan como conjuntos de elementos con características comunes.
+
+Deben tener existencia propia
+Cada instancia debe poder distinguirse
+Todas comparten los mismos atributos
+
+Los atributos son las propiedades que describen a las entidades o relaciones. Pueden clasificarse como:
+
+Simples o compuestos
+Mono-valuados o multi-valuados
+Almacenados o derivados
+
+El identificador es el atributo o conjunto de atributos que permite identificar de manera única cada entidad. Es fundamental para evitar ambigüedad en los datos.
+
+Las asociaciones representan la relación entre entidades y generalmente se expresan mediante verbos. También pueden tener atributos propios cuando se requiere describir la relación.
+
+La cardinalidad indica la cantidad de instancias que participan en una relación:
+
+1:1 (uno a uno)
+1:N (uno a muchos)
+N:N (muchos a muchos)
+
+La participación indica si la relación es obligatoria u opcional:
+
+Total: todas las entidades participan
+Parcial: algunas pueden no participar
+
+El MER incluye elementos avanzados que permiten modelar situaciones más complejas.
+
+Generalización y especialización (ISA):
+
+Permite definir jerarquías
+Superclase: entidad general
+Subclase: entidad específica
+
+Entidades fuertes y débiles:
+
+Fuertes: tienen existencia independiente
+Débiles: dependen de otra entidad para existir e identificarse
+
+Roles:
+
+Se utilizan cuando una entidad participa varias veces en una relación
+Permiten diferenciar el papel que juega cada instancia
+
+Un mal diseño del MER puede provocar:
+
+Redundancia de datos
+Inconsistencias en actualizaciones
+Uso excesivo de valores nulos
+Desperdicio de almacenamiento
+
+La metodología para construir un MER consiste en:
+
+Identificar entidades
+Definir atributos
+Determinar identificadores
+Establecer relaciones
+Definir cardinalidades
+Validar con los requerimientos
+
+=================================================
+
+MR
+
+El Modelo Relacional es la representación lógica de la base de datos y se obtiene al transformar el MER en tablas. En este modelo, la información se organiza en relaciones (tablas) compuestas por filas y columnas.
+
+Su objetivo es implementar la base de datos de manera eficiente, garantizando integridad, organización y acceso adecuado a los datos.
+
+Una tabla está formada por:
+
+Nombre de la tabla
+Columnas (atributos)
+Filas (registros)
+Clave primaria (identificador único)
+
+La transformación del MER al MR sigue reglas específicas.
+
+Entidades:
+
+Cada entidad se convierte en una tabla
+Sus atributos se convierten en columnas
+Su identificador se convierte en la clave primaria
+
+Relaciones:
+
+Relación N:N:
+
+Se crea una nueva tabla
+Incluye:
+Claves de las entidades participantes
+Atributos de la relación
+La clave primaria es la combinación de ambas claves
+
+Relación 1:N:
+
+La clave de la entidad del lado “1” se agrega a la tabla del lado “N”
+
+Relación 1:1:
+
+Se agrega la clave de una tabla en la otra
+
+Casos especiales:
+
+ISA:
+
+La clave de la superclase se hereda a las subclases
+Todas comparten la misma clave primaria
+
+Entidades débiles:
+
+Su tabla incluye:
+Clave de la entidad fuerte
+Atributo distintivo propio
+
+Roles:
+
+Se usan para evitar conflictos cuando una entidad aparece varias veces en una relación
+
+En caso de no existir un identificador natural, se debe crear una clave primaria artificial para garantizar la unicidad de los registros.
+
+El Modelo Relacional busca:
+
+Reducir redundancia
+Mantener integridad de datos
+Optimizar almacenamiento
+
+================================
+
+MER describe la estructura conceptual de los datos
+MR implementa esa estructura en tablas

@@ -1,0 +1,104 @@
+Diagrama de secuencia
+
+Víctor Adrián García Galván - A01713062
+
+Los diagramas de secuencia son un tipo de diagrama de comportamiento en UML que se utilizan para representar la interacción entre objetos en un sistema a lo largo del tiempo. Permiten visualizar cómo se comunican los objetos mediante el intercambio de mensajes dentro de un escenario específico.
+
+Un diagrama de secuencia es un tipo de diagrama de interacción que enfatiza el orden temporal de los mensajes, mostrando claramente la secuencia en la que ocurren las operaciones dentro del sistema.
+
+Su utilidad principal es detallar la implementación de los casos de uso, mostrando los objetos involucrados y los mensajes que intercambian, a diferencia de otros diagramas que solo muestran una vista general del sistema.
+
+La estructura del diagrama se organiza en dos dimensiones:
+
+Eje horizontal: representa los objetos o instancias
+Eje vertical: representa el tiempo
+
+El orden vertical indica la secuencia de ejecución de los mensajes.
+
+Los elementos principales del diagrama de secuencia son los siguientes:
+
+- Línea de vida:
+
+Representa la existencia de un objeto durante la interacción
+Se dibuja como una línea vertical discontinua
+
+- Foco de control:
+
+Indica el periodo en que un objeto está ejecutando una acción
+Se representa como un rectángulo delgado sobre la línea de vida
+
+- Objetos:
+
+Representan instancias de clases que participan en la interacción
+Se colocan en la parte superior del diagrama
+
+- Mensajes:
+
+Representan la comunicación entre objetos
+Se dibujan como flechas entre líneas de vida
+
+- Tipos de mensajes:
+
+Síncrono:
+Representa una llamada a método
+El objeto emisor espera la respuesta
+Se dibuja con flecha de cabeza llena
+
+Asíncrono:
+No espera respuesta
+Permite continuar la ejecución
+Se dibuja con flecha de cabeza abierta
+
+Retorno:
+Representa la respuesta de una llamada
+Se dibuja con línea discontinua
+Puede omitirse si es evidente
+
+Creación y destrucción de objetos:
+
+<<create>> indica la creación de un objeto
+<<destroy>> indica la eliminación de un objeto
+
+Los diagramas de secuencia pueden utilizarse de dos formas:
+
+De instancia:
+Representan un escenario específico
+Son una ejecución concreta de un caso de uso
+
+Genéricos:
+Representan el comportamiento completo de un caso de uso
+Incluyen condiciones, ciclos y alternativas
+
+Para modelar lógica más compleja, se utilizan fragmentos combinados, que permiten representar estructuras de control dentro del diagrama:
+
+alt:
+Representa decisiones tipo if–else
+Solo se ejecuta una de las alternativas
+
+opt:
+Representa una condición opcional
+Se ejecuta solo si se cumple la condición
+
+loop:
+Representa ciclos
+Se repite mientras se cumpla la condición
+
+par:
+Representa ejecución en paralelo
+
+critical:
+Representa una sección crítica
+Solo un proceso puede ejecutarse a la vez
+
+Los diagramas de secuencia son importantes porque:
+
+- Permiten entender cómo interactúan los objetos
+- Ayudan a validar la lógica del sistema
+- Facilitan la transición del diseño conceptual a la implementación
+- Complementan otros diagramas como casos de uso y diagramas de clases
+
+Idea clave para la entrevista: 
+
+Un diagrama de secuencia muestra quién interactúa con quién y en qué orden
+El tiempo siempre fluye de arriba hacia abajo
+Se centra en el comportamiento dinámico del sistema
