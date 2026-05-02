@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= juego.title %></title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #f9fafb; }
+        .card { background: white; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 6px; width: 420px; }
+        p { margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <h1><%= juego.title %></h1>
+
+    <div class="card">
+        <p><strong>ID:</strong> <%= juego.id %></p>
+        <p><strong>Estudio:</strong> <%= juego.studio %></p>
+        <p><strong>Género:</strong> <%= juego.genre %></p>
+        <p><strong>Año:</strong> <%= juego.release_year %></p>
+        <p><strong>Precio:</strong> $<%= juego.price %></p>
+        <p><strong>Rating:</strong> <%= juego.rating %></p>
+    </div>
+
+    <p>
+        <a href="/games/<%= juego.id %>/edit">Editar juego</a>
+        |
+        <a href="/games">Regresar al catálogo</a>
+    </p>
+</body>
+</html>
