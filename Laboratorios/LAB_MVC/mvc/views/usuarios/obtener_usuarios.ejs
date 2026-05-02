@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <%- include('./../css.ejs') %>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <!-- Enlace para ir al formulario de agregar usuario -->
+    <p><a href="/usuarios/agregar_usuario">Agregar nuevo usuario</a></p>
+    <h2>Usuarios</h2>
+    <ul>
+        <% usuarios.forEach(function(user) { %>
+            <li>
+                <strong><%= user.nombre %></strong> - Activo: <%= user.active %>
+                <!-- Enlaces para editar y eliminar -->
+                <a href="/usuarios/editar_usuario?id=<%= user.id %>">Editar</a>
+                <!-- Formulario para eliminar con método POST -->
+                <form action="/usuarios/eliminar_usuario" method="POST" style="display:inline">
+                    <input type="hidden" name="id" value="<%= user.id %>">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <h2>Alertas</h2>
+    <ul>
+        <% alertas.forEach(function(alerta) { %>
+            <li>
+                <strong><%= alerta.titulo %></strong> - Usuario ID: <%= alerta.idUser %> - Activa: <%= alerta.active %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+<%- include('./../scripts.ejs') %>
+</html>

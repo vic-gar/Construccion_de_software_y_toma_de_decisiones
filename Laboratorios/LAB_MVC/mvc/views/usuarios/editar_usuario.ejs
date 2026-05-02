@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <%- include('./../css.ejs') %>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/usuarios/editar_usuario" method="POST">
+        <!-- ID oculto para identificar el usuario -->
+        <input type="hidden" name="id" value="<%= usuario.id %>">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="<%= usuario.nombre %>" required>
+        <label for="activo">Activo:</label>
+        <select id="activo" name="activo">
+            <option value="true" <%= usuario.active ? 'selected' : '' %>>Sí</option>
+            <option value="false" <%= usuario.active ? '' : 'selected' %>>No</option>
+        </select>
+        <button type="submit">Actualizar</button>
+    </form>
+    <p><a href="/usuarios/obtener_usuarios">Volver a la lista</a></p>
+</body>
+<%- include('./../scripts.ejs') %>
+</html>
