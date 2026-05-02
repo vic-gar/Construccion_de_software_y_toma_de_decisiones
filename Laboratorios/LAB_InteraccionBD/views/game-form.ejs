@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= modo === 'crear' ? 'Agregar juego' : 'Editar juego' %></title>
+    <style>
+        body { font-family: system-ui, sans-serif; margin: 2rem; background: #f9fafb; }
+        form { background: white; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 6px; width: 420px; }
+        label { display: block; margin-top: 0.75rem; }
+        input { display: block; width: 100%; padding: 0.4rem; margin-top: 0.2rem; }
+        button { margin-top: 1rem; padding: 0.5rem 1rem; }
+    </style>
+</head>
+<body>
+    <h1><%= modo === 'crear' ? 'Agregar juego' : 'Editar juego' %></h1>
+
+    <form method="post" action="<%= modo === 'crear' ? '/games/new' : '/games/' + juego.id + '/edit' %>">
+        <label for="title">Título</label>
+        <input type="text" id="title" name="title" value="<%= juego.title || '' %>" required>
+
+        <label for="studio_id">ID del estudio</label>
+        <input type="number" id="studio_id" name="studio_id" value="<%= juego.studio_id || '' %>">
+
+        <label for="genre_id">ID del género</label>
+        <input type="number" id="genre_id" name="genre_id" value="<%= juego.genre_id || '' %>">
+
+        <label for="release_year">Año de lanzamiento</label>
+        <input type="number" id="release_year" name="release_year" value="<%= juego.release_year || '' %>">
+
+        <label for="price">Precio</label>
+        <input type="number" step="0.01" id="price" name="price" value="<%= juego.price || '' %>">
+
+        <label for="rating">Rating</label>
+        <input type="number" step="0.1" id="rating" name="rating" value="<%= juego.rating || '' %>">
+
+        <button type="submit">
+            <%= modo === 'crear' ? 'Guardar' : 'Actualizar' %>
+        </button>
+    </form>
+
+    <p><a href="/games">Regresar al catálogo</a></p>
+</body>
+</html>
