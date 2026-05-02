@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <%- include('includes/css.ejs') %>
+</head>
+<body>
+    <div class="container">
+        <h1><%= pageTitle %></h1>
+        <% if (usuarios && usuarios.length > 0) { %>
+            <ul>
+                <% for (let u of usuarios) { %>
+                    <li><%= u.nombre %></li>
+                <% } %>
+            </ul>
+        <% } else { %>
+            <p>No hay usuarios para mostrar.</p>
+        <% } %>
+    </div>
+</body>
+<%- include('includes/scripts.ejs') %>
+</html>
