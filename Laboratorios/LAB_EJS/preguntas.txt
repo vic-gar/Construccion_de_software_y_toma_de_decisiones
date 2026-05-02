@@ -1,0 +1,11 @@
+¿Qué otros templating engines existen para node?
+
+Estos son los principales templating engines utilizados actualmente según Alex Ivanovs (2026):
+
+- Pug (Jade): usa indentación en lugar de etiquetas, tiene mixins herencia y plantillas más concisas, pero tiene una curva de apredizaje alta.
+- Handlebars: Basado en Mustache, separa la lógica de la vista mediante helpers y partials, adecuado para correos o CMS donde personas no técnicas editan las plantillas.
+- Mustache: Plantillas “sin lógica” muy simples, portables a varios lenguajes pero sin condicionales ni bucles avanzados.
+- Liquid: Motor seguro de Shopify con sintaxis de filtros, se usa en tiendas Shopify y generadores estáticos.
+- Nunjucks: Port de Jinja2 con bloques, macros y autoescape, similar a Pug en potencia pero con sintaxis HTML.
+
+Ivanovs, A. (24 de marzo, 2026). JavaScript Templating Engines: Which Ones Still Matter in 2026? https://colorlib.com/wp/top-templating-engines-for-javascript/#:~:text=Nunjucks%20is%20Mozilla%E2%80%99s%20JavaScript%20port,Pug%20without%20the%20custom%20syntax
