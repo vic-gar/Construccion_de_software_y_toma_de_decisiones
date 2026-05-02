@@ -1,0 +1,24 @@
+
+1. ¿Que importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?
+
+Permite que la aplicación se comunique con el servidor sin recargar toda la página haciendo que la experiencia sea más rápida, dinámica y parecida a la de un programa de escritorio. También mejora la interacción del usuario, ya que solo se actualiza la parte necesaria de la interfaz.
+
+2. ¿Que implicaciones de seguridad tiene AJAX? ¿Donde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?
+
+AJAX puede aumentar ciertos riesgos de seguridad, como XSS y CSRF, porque expone más interacciones entre el navegador y el servidor. Además, como las peticiones son visibles desde el cliente, un atacante puede intentar modificarlas.
+
+Las validaciones importantes deben hacerse en el servidor, porque el cliente puede ser alterado o manipulado. En el lado del cliente solo conviene hacer validaciones básicas para mejorar la experiencia del usuario, como avisos rápidos o formatos incorrectos.
+
+3. ¿Que es JSON?
+
+JSON es un formato ligero para intercambiar datos entre aplicaciones, se usa mucho en AJAX porque es fácil de leer, escribir y procesar. Representa la información mediante objetos y arreglos, por ejemplo en APIs web.
+
+REFERENCIAS
+
+FasterCapital. (1 de diciembre, 2025). AJAX JavaScript y XML asincronicos el poder de AJAX en los RIA modernos. https://fastercapital.com/es/contenido/AJAX--JavaScript-y-XML-asincronicos--el-poder-de-AJAX-en-los-RIA-modernos.html
+FluProject. (18 de abril, 2014). Seguridad en AJAX (Parte II). https://www.flu-project.com/2014/04/seguridad-en-ajax-parte-ii.html
+OWASP. (s.f.). Input Validation Cheat Sheet. https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+JSON. (s. f.). Introducción a JSON. https://www.json.org/json-es.html
+
+
+

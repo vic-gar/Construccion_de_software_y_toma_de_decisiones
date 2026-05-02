@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>AJAX Consumption</title>
+    <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>AJAX consumption</h1>
+
+    <h2>Componente AJAX utilizado</h2>
+    <p>
+      El componente AJAX utilizado permite agregar productos al servidor mediante
+      una petición POST con fetch y actualizar la lista de productos sin recargar
+      la página.
+    </p>
+
+    <h2>Save Product</h2>
+
+    <div id="myForm">
+      <input type="number" id="id" name="id" placeholder="Id">
+      <input type="text" id="name" name="name" placeholder="Name">
+      <input type="number" id="price" name="price" placeholder="Price">
+      <button type="button" id="submitButton">Save Product</button>
+    </div>
+
+    <button type="button" id="updateProducts">Update Products</button>
+
+    <h2>Products JSON</h2>
+    <code id="codeResult"></code>
+
+    <h2>Products Table</h2>
+    <div id="wrapper"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
