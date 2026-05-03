@@ -1,0 +1,22 @@
+
+1. ¿En qué consiste el control de acceso basado en roles?
+
+El control de acceso basado en roles (RBAC) consiste en asignar permisos según el rol que tiene una persona dentro del sistema. Por ejemplo, un alumno, profesor y administrador tienen permisos diferentes, facilitando la administración porque no se asignan permisos usuario por usuario, sino por rol.
+
+2. Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso.
+
+Microsoft Azure usa Azure RBAC para controlar quién puede acceder a sus recursos y qué acciones puede realizar, puede asignar roles como propietario, colaborador o lector.
+
+Ventajas: permite administrar permisos de forma ordenada, aplicar el mínimo privilegio y controlar accesos en organizaciones grandes.
+Desventajas: puede volverse complejo si hay muchos roles o recursos, y una mala configuración puede dar permisos excesivos.
+
+Un sistema que no necesariamente aplica RBAC son las listas de control de acceso (ACL) en sistemas de archivos, donde los permisos se asignan directamente a usuarios, grupos o archivos específicos.
+
+Ventajas: permite un control muy detallado sobre cada archivo o carpeta.
+Desventajas: puede ser difícil de administrar cuando hay muchos usuarios o recursos, y es más fácil dejar permisos incorrectos o desactualizados.
+
+REFERENCIAS
+
+National Institute of Standards and Technology. (s. f.). Role-based access control (RBAC). NIST Computer Security Resource Center. https://csrc.nist.gov/glossary/term/role_based_access_control
+Microsoft. (2024). What is Azure role-based access control (Azure RBAC)? Microsoft Learn. https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
+Microsoft. (2025). Access Control Lists. Microsoft Learn. https://learn.microsoft.com/en-us/windows/win32/secauthz/access-control-lists
