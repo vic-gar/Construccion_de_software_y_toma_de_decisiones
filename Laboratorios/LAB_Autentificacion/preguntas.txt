@@ -1,0 +1,16 @@
+1. ¿Qué otras formas de autentificación existen?
+
+Existen varias formas de autentificación además del usuario y contraseña. Las más comunes son:
+
+- Contraseña o PIN: el usuario demuestra su identidad con algo que sabe.
+- Autentificación multifactor, MFA o 2FA: combina dos o más factores, por ejemplo contraseña + código enviado al celular. Es más segura porque no depende de un solo elemento.
+- Códigos de un solo uso, OTP: códigos temporales generados por apps como Google Authenticator, Microsoft Authenticator o enviados por SMS/correo.
+- Biometría: usa rasgos físicos del usuario, como huella digital, reconocimiento facial, iris o voz.
+- Tokens físicos o llaves de seguridad: dispositivos como YubiKey o tarjetas inteligentes que el usuario debe tener para iniciar sesión.
+- Certificados digitales: se usa un certificado instalado en el dispositivo para comprobar la identidad del usuario o sistema.
+- Autentificación sin contraseña: permite iniciar sesión con métodos como passkeys, enlaces mágicos por correo o claves criptográficas almacenadas en el dispositivo.
+- Inicio de sesión federado: permite autenticarse usando otra cuenta, por ejemplo “Iniciar sesión con Google”, Microsoft, GitHub o Facebook.
+
+REFERENCIAS
+
+OWASP Foundation. (s. f.). Multifactor Authentication Cheat Sheet. OWASP Cheat Sheet Series. https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html
