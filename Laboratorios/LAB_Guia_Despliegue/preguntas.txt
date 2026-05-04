@@ -1,0 +1,42 @@
+1. ¿Que elementos hay que configurar para un entorno de produccion?
+
+Para un entorno de producción se deben configurar el servidor o hosting, el dominio, el puerto, la base de datos, las variables de entorno y el modo de ejecución de la aplicación.
+
+También es importante configurar seguridad, como HTTPS/SSL, manejo de errores, validaciones del lado del servidor, cookies seguras, Helmet en Express, logs y algún mecanismo para reiniciar la aplicación si falla.
+
+2. ¿Que variables de entorno tienes que crear en tu proyecto?
+
+DATABASE_URL=postgresql://usuario:password@host:puerto/base
+SESSION_SECRET=clave_secreta
+
+3. Investiga los tipos de DNS y explícalos
+
+- A: Apunta un dominio a una dirección IPv4.
+- AAAA: Apunta un dominio a una dirección IPv6.
+- CNAME: Hace que un dominio sea alias de otro.
+- MX: Indica los servidores que reciben el correo del dominio.
+- TXT: Guarda texto para verificaciones y seguridad, como SPF, DKIM o DMARC.
+- NS: Indica qué servidores DNS administran el dominio.
+- CAA: Define qué autoridades pueden emitir certificados SSL/TLS.
+
+4. ¿Qué significa para un dominio cambiar el registro NS a diferencia de los demás?
+
+Cambiar un registro A, CNAME o MX modifica una parte específica del dominio, como la página web o el correo. En cambio, cambiar los registros NS significa cambiar el proveedor que administra toda la zona DNS del dominio.
+
+5. Investiga los pros y contras de los certificados SSL gratuitos contra los de pago ¿Qué ventajas y desventajas otorgan? ¿Para cuando se recomendaría usar uno de pago ho en día?
+
+Los certificados SSL/TLS permiten usar HTTPS, cifrando la comunicación entre el usuario y el servidor.
+
+Los certificados gratuitos, como los de Let’s Encrypt, son útiles para sitios personales, blogs, proyectos escolares o aplicaciones pequeñas, siendo su principal ventaja que no tienen costo y pueden automatizarse. Una desventaja es que suelen ofrecer solo validación del dominio, sin soporte personalizado ni garantías comerciales.
+
+Los certificados de pago pueden ofrecer validación de la organización, soporte técnico, garantías, certificados wildcard o multidominio, sin embargo, tienen costo y no necesariamente cifran mejor que uno gratuito, si ambos están bien configurados.
+
+Hoy en día, uno gratuito suele ser suficiente para proyectos pequeños o sitios informativos, uno de pago se recomienda cuando una empresa necesita demostrar identidad legal, manejar datos sensibles, cumplir políticas internas o contar con soporte y garantías.
+
+REFERENCIAS
+
+Express. Production best practices: security. https://expressjs.com/en/advanced/best-practice-security.html
+Cloudflare. DNS record types. https://developers.cloudflare.com/dns/manage-dns-records/reference/dns-record-types/
+Cloudflare. What is a DNS NS record? https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/
+Cloudflare. What is SSL? https://www.cloudflare.com/learning/ssl/what-is-ssl/
+DigiCert. Difference between DV, OV and EV SSL certificates. https://www.digicert.com/difference-between-dv-ov-and-ev-ssl-certificates
