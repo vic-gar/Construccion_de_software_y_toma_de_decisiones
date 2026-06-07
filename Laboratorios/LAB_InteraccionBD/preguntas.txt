@@ -1,0 +1,35 @@
+1. ¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?
+
+Centralizar el SQL en la capa del modelo hace que todo el acceso a la base de datos pase por un punto único, facilitando el mantenimiento, porque si cambia una tabla o una lógica, solo se modifica allí, no en muchas rutas. Además, se reutilizan consultas y se puede controlar mejor la seguridad en un solo lugar.
+
+2. ¿Qué es SQL injection y cómo se puede prevenir?
+
+SQL injection es un ataque donde el atacante introduce código SQL dentro de los datos que la aplicación envía a la base de datos, así, puede leer, borrar o modificar datos, e incluso tomar control del servidor. Se previene principalmente usando consultas parametrizadas, que separan el código SQL de los datos, además de validar y sanitizar entradas y dar a la aplicación solo los permisos mínimos necesarios.
+
+3. ¿Por qué en la práctica las credenciales de Supabase viven en un archivo .env y no directamente en database.js? Menciona al menos dos consecuencias concretas (no teóricas) de haberlas escrito en el código y haber hecho commit.
+
+Las credenciales de Supabase se colocan en un archivo .env porque así no se incluyen en el código fuente y no se suben al repositorio si ese archivo está en .gitignore. Esto evita que cualquiera que vea el repositorio pueda acceder a tu base de datos y también permite tener distintas claves para desarrollo, staging y producción sin cambiar el código.
+
+4. ¿Qué problema resuelve usar un pool de conexiones en lugar de abrir y cerrar una conexión nueva en cada request?
+
+Abrir y cerrar una conexión nueva en cada petición es lento y consume muchos recursos del servidor de base de datos, porque implica negociar la conexión, autenticarse, etc., en cada llamada. Un pool de conexiones mantiene un conjunto de conexiones ya abiertas, que se reutilizan entre varias peticiones, mejorando el rendimiento, porque la app no espera a crear conexiones nuevas, y se limita el número máximo de conexiones activas, evitando que el servidor se sature con muchos usuarios.
+
+5. En la práctica usaste pool.query(sql, [valor1, valor2]) con placeholders $1, $2 en lugar de armar el query concatenando strings. Muestra un ejemplo corto de un query inseguro y su versión parametrizada, y explica en 2–3 líneas por qué el segundo bloquea una inyección como ' OR 1=1 --.
+
+Inseguro: 
+const id = req.body.id;
+const sql = `SELECT * FROM users WHERE id = '${id}'`;
+pool.query(sql);
+
+Seguro:
+const id = req.body.id;
+const sql = `SELECT * FROM users WHERE id = $1`;
+pool.query(sql, [id]);
+
+Si el usuario manda 1' OR 1=1 --, la consulta final queda como verdadera devolviendo todos los usuarios. En cambio en el seguro el id se pasa como parámetro, no como parte del query tratando el 1' OR 1=1 -- como un dato literal en la cadena y la estructura del WHERE no cambia, haciendo que no se altere la lógica de la consulta.
+
+
+REFERENCIAS
+SentinelOne. (2024). ¿Qué es la inyección SQL? Ejemplos y prevención. SentinelOne. https://www.sentinelone.com/es/cybersecurity-101/cybersecurity/sql-injection/
+Astro. (2025). Supabase y Astro | Docs. Astro. https://docs.astro.build/es/guides/backend/supabase/ 
+Curso de Hibernate con Spring. (2023). Pool de conexiones. CursoHibernate.es. https://cursohibernate.es/doku.php?id=patrones%3Apool_conexiones

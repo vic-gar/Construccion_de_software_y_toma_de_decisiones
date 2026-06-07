@@ -1,0 +1,12 @@
+Describe el archivo package.json.
+
+El archivo package.json es la configuración del proyecto en Node.js.
+
+Se describe varias características como el nombre del proyecto, la versión actual
+del proyecto, una breve descripción, el autor y la licencia. Además aborda aspectos
+técnicos como que se usan módulos CommonJS y que nuestro index.js es el archivo principal
+del proyecto. 
+
+También presenta los scripts o comandos que se pueden ejecutar con npm run y los
+paquetes que el proyecto necesita para funcionar, como en este caso express y 
+body-parser.

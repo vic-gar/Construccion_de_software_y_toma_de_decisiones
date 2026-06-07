@@ -1,0 +1,22 @@
+Víctor A. García Galván - A01713062
+
+1. ¿Por que es una buena practica usar JavaScript para checar que sean validos los inputs de las formas antes de enviar los datos al servidor?
+
+La validación en el navegador permite detectar errores de formato y campos vacíos de rapidamente, de modo que el usuario pueda corregirlos sin esperar una vuelta al servidor, mejorando la experiencia de uso y evita solicitudes innecesarias al servidor, aunque no sustituye la validación del lado del servidor.
+
+2. ¿Como puedes saltarte la seguridad de validaciones hechas con JavaScript?
+
+Al ejecutarse en el cliente, la validación se puede eludir deshabilitando JavaScript, editando el HTML con herramientas de desarrollo, enviando peticiones modificadas mediante proxies como Burp Suite o aplicaciones como Postman y cURL.
+
+3. Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por que la primera pregunta dice que es una buena practica?
+
+La validación del lado del cliente no es una medida de seguridad, sino un complemento que facilita al usuario cumplir las reglas de entrada y reduce la carga de trabajo del servidor. OWASP señala que, aunque puede ser vulnerada, la validación en JavaScript mejora la UX y debe complementarse con una validación en el servidor para garantizar la integridad de los datos.
+
+
+REFERENCIAS
+
+OWASP Foundation. (s.f.). Input validation cheat sheet (sección “Client‑side vs server‑side validation”). OWASP Cheat Sheet Series. https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+
+Mozilla Developer Network. (s.f.). Client‑side form validation. En MDN Web Docs. https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
+
+CodeSignal. (s.f.). Enhancing user experience with HTML5 client‑side validation. En Secure input validation in web applications (lección de curso). https://codesignal.com/learn/courses/secure-input-validation-in-web-applications-2/lessons/implementing-client-side-validation

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <%- include('./../css.ejs') %>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/usuarios/agregar_usuario" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="activo">Activo:</label>
+        <select id="activo" name="activo">
+            <option value="true">Sí</option>
+            <option value="false">No</option>
+        </select>
+        <button type="submit">Guardar</button>
+    </form>
+    <p><a href="/usuarios/obtener_usuarios">Volver a la lista</a></p>
+</body>
+<%- include('./../scripts.ejs') %>
+</html>

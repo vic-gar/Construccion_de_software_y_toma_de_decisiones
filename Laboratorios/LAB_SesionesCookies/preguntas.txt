@@ -1,0 +1,9 @@
+Investiga alguno de los ataques de la OWASP Top 10 y realiza un resumen de dicho ataque con sus formas de prevenirlo.
+
+Un ataque de la OWASP Top 10 es Cross-Site Scripting (XSS), que entra dentro de la categoría de inyección, este ataque ocurre cuando una aplicación permite que un usuario inserte código malicioso, normalmente JavaScript, y después ese código se ejecuta en el navegador de otra persona. Por ejemplo, si una página muestra directamente lo que el usuario escribió en un comentario o búsqueda sin limpiarlo, un atacante podría insertar un <script> para robar cookies, redirigir al usuario a otra página falsa o ejecutar acciones en su nombre.
+
+Para prevenir XSS, la aplicación debe escapar la salida antes de mostrar datos del usuario en HTML. En EJS, es más seguro usar <%= variable %> porque escapa el contenido automáticamente, en lugar de <%- variable %>, que imprime HTML sin filtrar, también se deben validar los datos del lado del servidor, evitar insertar directamente valores del usuario en el HTML, usar cookies con HttpOnly para que JavaScript no pueda leerlas y aplicar headers de seguridad como Content Security Policy (CSP), que ayuda a bloquear scripts no autorizados. OWASP recomienda estas medidas como parte de sus guías de prevención para XSS.
+
+REFERENCIAS
+
+OWASP Foundation. (s. f.). Cross Site Scripting Prevention Cheat Sheet. OWASP Cheat Sheet Series. https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html

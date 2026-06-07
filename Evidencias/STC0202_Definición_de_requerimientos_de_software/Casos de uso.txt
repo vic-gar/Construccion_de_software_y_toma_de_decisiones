@@ -1,0 +1,9 @@
+Casos de uso definidos para el sistema automatizado SVA LAW
+
+Víctor Adrián García Galván - A01713062
+
+Los detalles de casos de uso generados durante el desarrollo del documento de requerimientos para el Sistema Automatizado SVA Law fueron llevados a cabo por ambos miembros del equipo, divididos para asegurar eficiencia pero con un estándar tanto en el diagrama de actividades como en el detallado, esto para asegurar que todo lo que presentemos siga un mismo estándar.
+
+Como trabajo individual en el desarrollo de los casos de uso me encargué de generar aquellos relacionados con los requisitos funcionales 09, 12 y 13, validando siempre con mi compañero tanto el formato como el seguimiento de las reglas de negocio. 
+
+Definimos que los diagramas se llevarían a cabo con PlantUML, para tener consistencia en el diseño, haciendo que su visualización y análisis fuera sencilla. Por otra parte, en los detalles del caso de uso se empleó por una plantilla en la que se definieran el nombre del caso de uso, una clave para identificarlo, el requisito al que hace referencia, el actor o actores principales, el propósito, una breve descripción, las precondiciones, postcondiciones, el flujo principal y el flujo alterno, siendo estos dos últimos los representados en el diagrama de actividades. 
