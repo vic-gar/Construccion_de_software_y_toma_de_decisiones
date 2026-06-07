@@ -1,0 +1,33 @@
+Documentación — Nueva Funcionalidad: Selección de Nivel de Dificultad
+Proyecto: Highway Dodger
+Fecha: 07 de junio de 2026
+
+Descripción general
+Se añadió una pantalla de selección de nivel de dificultad que aparece antes de 
+cada partida. El jugador elige entre tres niveles que ajustan 
+independientemente la velocidad de la carretera, la frecuencia de aparición de 
+enemigos y la tasa de aceleración de ambos parámetros conforme avanza el score.
+
+
+
+Niveles disponibles
+Nivel    Tecla    Velocidad base    Spawninicial      Factor de aceleración
+FÁCIL      1         200 px/s           1.3 s                 ×0.5
+NORMAL     2         320 px/s           0.9 s                 ×1.0
+DIFÍCIL    3         440 px/s           0.6 s                 ×1.6
+
+NORMAL reproduce el comportamiento original del juego exactamente.
+
+
+
+Flujo del usuario
+
+Abrir el juego
+Pantalla de selección de dificultad (clic o teclado 1/2/3 + Enter)
+Partida activa (HUD muestra NIVEL: en esquina inferior)
+Colisión = Game Over (muestra puntaje y nivel jugado y envía score + difficulty 
+al servidor)
+Presionar Espacio
+Volver a pantalla de selección
+
+Link resultado final = https://youtu.be/yPWloFXBzVU
